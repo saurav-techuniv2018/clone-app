@@ -1,4 +1,10 @@
-p {
+div.trend-items{
   font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
   color: #F8FEFC;
 }
+
+i.material-icons {
+  float: right;
+  font-size: 36px;
+} 

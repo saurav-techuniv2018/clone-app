@@ -16,7 +16,7 @@ class App extends React.Component {
 
   trendingItemRenderings() {
     return this.trendingItems.reduce((accumulator, trend) => {
-      accumulator.push(<Trend title={trend.title} isTrending={trend.isTrending} />);
+      accumulator.push(<li><Trend title={`#${trend.title}`} isTrending={trend.isTrending} /></li>);
       return accumulator;
     }, []);
   }
@@ -27,9 +27,9 @@ class App extends React.Component {
         <Card id="outerCard">
           <Card id="innerCard">
             <h3>{this.appName}</h3>
-            <div>
+            <ul>
               {this.trendingItemRenderings()}
-            </div>
+            </ul>
           </Card>
         </Card>
       </div>

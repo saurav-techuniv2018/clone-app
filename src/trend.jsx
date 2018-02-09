@@ -15,10 +15,8 @@ class Trend extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>{this.props.title} {this.props.isTrending ?
-          <i className="material-icons">trending_up</i> : null}
-        </p>
+      <div className="trend-items">{this.props.title} {this.props.isTrending ?
+        <i className="material-icons">trending_up</i> : null}
       </div>
     );
   }
