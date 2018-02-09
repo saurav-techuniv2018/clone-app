@@ -4,6 +4,8 @@ import Trend from './trend';
 import Card from './card';
 import getTrendingItems from './lib/get-trending-items';
 
+import './App.css';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -22,14 +24,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Card
-          id="outerCard"
-          colorClass="grey"
-        >
-          <Card
-            id="innerCard"
-            colorClass="blue"
-          >
+        <Card id="outerCard">
+          <Card id="innerCard">
             <h3>{this.appName}</h3>
             <div>
               {this.trendingItemRenderings()}

@@ -7,14 +7,13 @@ class Card extends React.Component {
 
     Card.propTypes = {
       id: PropTypes.string.isRequired,
-      colorClass: PropTypes.string.isRequired,
       children: PropTypes.element.isRequired,
     };
   }
 
   render() {
     return (
-      <div id={this.props.id} className={this.props.colorClass}>
+      <div id={this.props.id}>
         {this.props.children}
       </div>
     );
