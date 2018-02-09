@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Trend from './trend';
+import Card from './card';
 import getTrendingItems from './lib/get-trending-items';
 
 class App extends React.Component {
@@ -21,10 +22,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h3>{this.appName}</h3>
-        <div>
-          {this.trendingItemRenderings()}
-        </div>
+        <Card
+          id="outerCard"
+          colorClass="grey"
+        >
+          <Card
+            id="innerCard"
+            colorClass="blue"
+          >
+            <h3>{this.appName}</h3>
+            <div>
+              {this.trendingItemRenderings()}
+            </div>
+          </Card>
+        </Card>
       </div>
     );
   }
